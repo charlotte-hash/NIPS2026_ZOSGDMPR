@@ -498,7 +498,6 @@ def main():
     ap.add_argument("--eval_batches", type=int, default=50)
 
     # train evaluation batches
-    # 建议不要默认全量 train，否则 CIFAR-10 上会明显变慢
     ap.add_argument("--train_eval_batches", type=int, default=50)
 
     # GN
@@ -515,14 +514,14 @@ def main():
     ap.add_argument("--dir_seed_offset", type=int, default=777)
 
     # ZO-SGD
-    ap.add_argument("--lr_sgd", type=float, default=3e-4)
+    ap.add_argument("--lr_sgd", type=float, default=5e-4)
 
     # ZO-SGDM
-    ap.add_argument("--eta_sgdm", type=float, default=3e-4)
+    ap.add_argument("--eta_sgdm", type=float, default=5e-4)
     ap.add_argument("--beta_sgdm", type=float, default=0.1)
 
     # ZO-SGDM with periodic reset
-    ap.add_argument("--eta_pr", type=float, default=3e-4)
+    ap.add_argument("--eta_pr", type=float, default=5e-4)
     ap.add_argument("--beta_pr", type=float, default=0.1)
     ap.add_argument("--reset_every", type=int, default=1000)
 
