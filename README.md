@@ -16,27 +16,31 @@ numpy
 matplotlib
 tqdm
 
+```text
 We recommend creating a new conda environment:
 
 conda create -n zosgdm-pr python=3.10 -y
 conda activate zosgdm-pr
 
+```text
 Then install the required packages:
 
 pip install torch torchvision numpy matplotlib tqdm
 
+```text
 Alternatively, you may install PyTorch following the official instructions for your CUDA version, and then install the remaining packages:
 
 pip install numpy matplotlib tqdm
+```text
 Dataset
-
 The CIFAR-10 dataset is automatically downloaded by torchvision.datasets.CIFAR10 when running the experiment scripts. No manual dataset preparation is required.
 
+```text
 Reproducing figures
-
 The plotting scripts use saved result files and require only:
 
 numpy
 matplotlib
 
+```text
 The generated figures will be saved to the output directory specified in the corresponding script.
