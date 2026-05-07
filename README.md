@@ -1,46 +1,51 @@
 # NIPS2026_ZOSGDMPR
-Code for NIPS2026
+
+Code for NIPS2026.
+
 ## Requirements
 
 The experiments are implemented in Python with PyTorch. We recommend using a CUDA-enabled GPU to reproduce the main experiments.
 
-### Software dependencies
+## Software Dependencies
 
 The main dependencies are:
 
-```text
-python >= 3.10
-torch >= 2.0
-torchvision >= 0.15
-numpy
-matplotlib
-tqdm
+- Python >= 3.10
+- PyTorch >= 2.0
+- torchvision >= 0.15
+- NumPy
+- Matplotlib
+- tqdm
 
-```text
-We recommend creating a new conda environment:
+A CUDA-compatible PyTorch installation is recommended for GPU acceleration. Please install the PyTorch version that matches your local CUDA environment.
 
+## Installation
+
+We recommend creating a new conda environment.
+
+```bash
 conda create -n zosgdm-pr python=3.10 -y
 conda activate zosgdm-pr
+```
 
-```text
-Then install the required packages:
+Then install the required packages.
 
+```bash
 pip install torch torchvision numpy matplotlib tqdm
+```
 
-```text
-Alternatively, you may install PyTorch following the official instructions for your CUDA version, and then install the remaining packages:
+Alternatively, you may install PyTorch following the official instructions for your CUDA version, and then install the remaining packages.
 
+```bash
 pip install numpy matplotlib tqdm
-```text
-Dataset
-The CIFAR-10 dataset is automatically downloaded by torchvision.datasets.CIFAR10 when running the experiment scripts. No manual dataset preparation is required.
+```
 
-```text
-Reproducing figures
-The plotting scripts use saved result files and require only:
+## Dataset
 
-numpy
-matplotlib
+The CIFAR-10 dataset is automatically downloaded by `torchvision.datasets.CIFAR10` when running the experiment scripts. No manual dataset preparation is required.
 
-```text
+## Reproducing Figures
+
+The plotting scripts use saved result files and require only NumPy and Matplotlib.
+
 The generated figures will be saved to the output directory specified in the corresponding script.
